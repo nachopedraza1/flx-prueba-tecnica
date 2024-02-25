@@ -2,8 +2,6 @@
 
 # Prueba Técnica I+D Team - CRUD de Usuarios en React
 
-Este repositorio contiene una prueba técnica que implementa operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de usuarios utilizando React.
-
 ## Instrucciones
 
 Para ejecutar la prueba técnica en tu entorno local, sigue los pasos a continuación:
