@@ -5,7 +5,7 @@
 ## Notas adicionales
 
 - Se ha agregado la propiedad 'updatedAt' a la base de datos JSON ubicada en la carpeta API para gestionar la actualización de registros.
-- Si encuentras algún problema o tienes alguna pregunta, no dudes en contactarme (wa.me/3513295515).
+- Si encuentras algún problema o tienes alguna pregunta, no dudes en contactarme ([wa.me/3513295515](https://wa.me/3513295515)).
 
 ## Instrucciones
 
