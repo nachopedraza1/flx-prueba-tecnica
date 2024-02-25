@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Button, Col, Form, Input, InputNumber, Row, Select } from "antd";
 
-import { ModalLayout } from "@/components/layouts";
-import { UiContext } from "@/context/ui";
-import { addUserFields } from "@/utils";
 import { useCrud } from "@/hooks";
+import { addUserFields } from "@/utils";
+import { UiContext } from "@/context/ui";
+import { ModalLayout } from "@/components/layouts";
 
 export const CreateAndEditUser: React.FC = () => {
 

@@ -1,8 +1,9 @@
 import { useContext } from "react"
 import { Button, Col, Row, Typography } from "antd";
-import { UiContext } from "@/context/ui";
+
 import { useCrud } from "@/hooks";
-import { ModalLayout } from "../layouts";
+import { UiContext } from "@/context/ui";
+import { ModalLayout } from "@/components/layouts";
 
 
 export const DeleteUser: React.FC = () => {

@@ -11,7 +11,7 @@ export interface UiState {
 const Ui_INITIAL_STATE: UiState = {
     showModal: false,
     typeModal: undefined,
-    selectedUser: undefined,
+    selectedUser: undefined
 }
 
 export const UiProvider: FC<{ children: ReactNode }> = ({ children }) => {
