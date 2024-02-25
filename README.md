@@ -7,7 +7,7 @@
 git clone https://github.com/nachopedraza1/flx-prueba-tecnica
 cd flx-prueba-tecnica
 
-cd cd api
+cd api
 npm install
 npm run server
 
