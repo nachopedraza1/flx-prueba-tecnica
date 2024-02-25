@@ -2,6 +2,11 @@
 
 # Prueba Técnica I+D Team - CRUD de Usuarios en React
 
+## Notas adicionales
+
+- Se ha agregado la propiedad 'updatedAt' a la base de datos JSON ubicada en la carpeta API para gestionar la actualización de registros.
+- Si encuentras algún problema o tienes alguna pregunta, no dudes en contactarme (3513295515).
+
 ## Instrucciones
 
 Para ejecutar la prueba técnica en tu entorno local, sigue los pasos a continuación:
@@ -50,9 +55,4 @@ Para ejecutar la prueba técnica en tu entorno local, sigue los pasos a continua
     ```
 
 Esto iniciará la aplicación y podrás acceder a ella desde tu navegador.
-
-## Notas adicionales
-
-- Se ha agregado la propiedad 'updatedAt' a la base de datos JSON ubicada en la carpeta API para gestionar la actualización de registros.
-- Si encuentras algún problema o tienes alguna pregunta, no dudes en contactarme (3513295515).
 
