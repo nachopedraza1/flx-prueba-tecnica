@@ -4,8 +4,9 @@
 */
 
 function reverseString(str) {
-  // Tu solución acá  
+  return str.split('').reverse().join('')
 }
+
 
 /*
   Ejercicio 2: Check for Palindrome
@@ -13,8 +14,10 @@ function reverseString(str) {
   y devuelva true si la cadena es un palíndromo, y false en caso contrario.
 */
 function isPalindrome(str) {
-  // Tu solución acá
+  str = str.replace(/\s/g, '').toLowerCase();
+  return str === str.split('').reverse().join('');
 }
+
 
 /*
   Ejercicio 3: Find the Nearest Pair
@@ -31,6 +34,21 @@ function isPalindrome(str) {
 
 function closestPair(arr) {
   // Tu solución acá
+  arr.sort((a, b) => a - b);
+
+  let minDiff = Infinity;
+  let pairs = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    let diff = Math.abs(arr[i + 1] - arr[i]);
+
+    if (diff < minDiff) {
+      minDiff = diff;
+      pairs = [arr[i], arr[i + 1]];
+    }
+  }
+
+  return pairs;
 }
 
 
@@ -67,7 +85,41 @@ function closestPair(arr) {
 */
 
 class Calculator {
-  // Tu solución acá
+  constructor() {
+    this.lastResult = null;
+  }
+
+  add(a, b) {
+    this.lastResult = a + b;
+    return this.lastResult;
+  }
+
+  subtract(a, b) {
+    this.lastResult = a - b;
+    return this.lastResult;
+  }
+
+  divide(a, b) {
+    if (b === 0) throw new Error("Division by zero is not allowed");
+    this.lastResult = a / b;
+    return this.lastResult;
+  }
+
+  multiply(a, b) {
+    this.lastResult = a * b;
+    return this.lastResult;
+  }
+
+  getLastResult() {
+    return this.lastResult;
+  }
+
+  exponentiate(base, exp) {
+    if (exp < 0) throw new Error("Exponentiation with negative exponent is not allowed");
+    this.lastResult = Math.pow(base, exp);
+    return this.lastResult;
+  }
+
 }
 
 module.exports = {
