@@ -7,7 +7,7 @@ import { MainLayout } from './components/layouts';
 const App = () => {
 
   return (
-    <MainLayout>
+    <MainLayout routes={[{ title: "Usuarios" }, { title: "Listado de usuarios" }]}>
       <FilterBar />
       <UsersTable />
     </MainLayout>

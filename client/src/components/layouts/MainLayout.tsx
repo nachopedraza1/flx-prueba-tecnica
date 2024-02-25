@@ -1,9 +1,15 @@
 import { Layout } from 'antd';
 import { Breadcrumbs } from '@/components/ui';
+import { BreadcrumbItemType, BreadcrumbSeparatorType } from 'antd/es/breadcrumb/Breadcrumb';
 
 const { Header, Content } = Layout;
 
-export const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface Props {
+    routes: Partial<BreadcrumbItemType & BreadcrumbSeparatorType>[];
+    children: React.ReactNode;
+}
+
+export const MainLayout: React.FC<Props> = ({ children, routes }) => {
     return (
         <Layout>
             <Header>
@@ -11,7 +17,7 @@ export const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }
             </Header>
 
             <Content>
-                <Breadcrumbs items={[{ title: "Usuarios" }, { title: "Listado de usuarios" }]} />
+                <Breadcrumbs items={routes} />
                 {children}
             </Content>
         </Layout>
