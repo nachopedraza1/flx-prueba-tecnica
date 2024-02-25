@@ -3,6 +3,8 @@
 
 ## Instrucciones
 
+## NOTA > Utilizar la db.json ubicada en la carpeta API, se le agrego la propr 'updatedAt'.
+
 ```bash
 git clone https://github.com/nachopedraza1/flx-prueba-tecnica
 cd flx-prueba-tecnica
