@@ -4,6 +4,7 @@ import axios from "axios";
 import { PaginationManagerContext } from '@/context/pagination';
 import { UiContext } from "@/context/ui";
 import { User } from '@/interfaces';
+import { message } from 'antd';
 
 const API_URL = 'http://localhost:4000/users/';
 
@@ -20,18 +21,22 @@ export const useCrud = () => {
             switch (operation) {
                 case 'create':
                     await axios.post(API_URL, { ...user, id: crypto.randomUUID(), updatedAt: new Date() });
+                    message.success(`Usuario ${user?.username} creado exitosamente.`, 3);
                     break;
                 case 'update':
                     await axios.put(`${API_URL}${selectedUser?.id}`, { ...user, updatedAt: new Date() });
+                    message.info(`Usuario ${user?.username} actualizado exitosamente.`, 3);
                     break;
                 case 'delete':
                     await axios.delete(`${API_URL}${selectedUser?.id}`);
+                    message.error(`Usuario ${selectedUser?.username} eliminado exitosamente.`, 3);
                     break;
                 default:
                     throw new Error('Operación no válida');
             }
         } catch (error) {
             console.error(error);
+            message.error("Algo salio mal, contacte a un administrador", 3);
         } finally {
             setTimeout(() => {
                 refreshData();
