@@ -66,7 +66,7 @@ export const UsersTable: React.FC = () => {
                 pagination={{
                     pageSize: 10,
                     current: currentPage,
-                    total: 50, // Lo ideal seria que la api nos envie un total de elementos y la currentPage
+                    total:  50, // Lo ideal seria que la api nos envie un total de elementos y la currentPage
                     onChange: handleChangePage
                 }}
             />

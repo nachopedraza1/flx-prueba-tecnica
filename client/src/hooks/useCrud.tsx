@@ -29,7 +29,7 @@ export const useCrud = () => {
                     break;
                 case 'delete':
                     await axios.delete(`${API_URL}${selectedUser?.id}`);
-                    message.error(`Usuario ${selectedUser?.username} eliminado exitosamente.`, 3);
+                    message.success(`Usuario ${selectedUser?.username} eliminado exitosamente.`, 3);
                     break;
                 default:
                     throw new Error('Operación no válida');
